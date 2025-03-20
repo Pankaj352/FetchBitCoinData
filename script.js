@@ -29,11 +29,10 @@ function renderTable(data) {
    const priceChange = document.createElement('td');
    const marketCap = document.createElement('td');
    
-   if (priceChange > 0) {
-    priceChange.style.color = 'green';
-    
+   if (coin.price_change_percentage_24h > 0) {
+     priceChange.style.color = "green";
    } else {
-    priceChange.style.color = 'red';
+     priceChange.style.color = "red";
    }
    priceChange.textContent = `${coin.price_change_percentage_24h.toFixed(2)}%`;
    marketCap.textContent = `$${coin.market_cap.toLocaleString()}`;
