@@ -37,7 +37,7 @@ function renderTable(data) {
    priceChange.textContent = `${coin.price_change_percentage_24h.toFixed(2)}%`;
    marketCap.textContent = `$${coin.market_cap.toLocaleString()}`;
     row.innerHTML = `
-            <td style="display:flex;justify-content:left;align-items:center;"><img src="${coin.image}" alt="${coin.name}">${coin.name}</td>
+            <td style="display:flex;justify-content:left;align-items:center;"><img src="${coin.image}" alt="${coin.name}">&nbsp;&nbsp;${coin.name}</td>
             <td>${coin.symbol.toUpperCase()}</td>
             <td>$${coin.current_price.toFixed(2)}</td>
             <td>${coin.total_volume.toLocaleString()}</td>
